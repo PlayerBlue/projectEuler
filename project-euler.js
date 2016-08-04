@@ -32,29 +32,20 @@ function evenFibonacciSum(limit) {
 	return sum;
 }
 
-
 function largestPrimeNum(number) {
-	var max1 = Math.sqrt(number), maxPrime = 1;
+	var max1 = Math.sqrt(number), maxPrime = number;
 	for (var i = 2; i <= max1; i++) {
 		if (number % i === 0) {
 			var primeCheck = number / i, max2 = Math.sqrt(primeCheck), max3 = Math.sqrt(i);
 			for (var j = 2; j <= max2 && primeCheck % j !== 0; j++);
-
 			if (j > max2) {
 				return primeCheck;
-			}
-			
+			}			
 			for (var k = 2; k <= max3 && i % k !== 0; k++);
 			if (k > max3) {
 				maxPrime = i;
 			}
 		}
 	}
-	if (maxPrime > 1) {
-				return maxPrime;
-			}
-	return number;
+	return maxPrime;
 }
-}
-
-largestPrimeNum(600851475143);
