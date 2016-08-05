@@ -20,7 +20,7 @@ function multipliesOf3And5s2(limit) {
 	return sum;
 }
 
-function multipliesOf3And5s2(numbers) {
+function multipliesOf3And5s3(numbers) {
 	numbers[3] = numbers[1] * numbers[2];
 	var max = [];
 	var sum = 0;
