@@ -54,7 +54,7 @@ function largestPrimeNums2(number) {
 	while (number % 2 === 0) {
 		number /= 2;
 	}
-	max = Math.sqrt(number);
+	var max = Math.sqrt(number);
 	for (var i = 3; i <= max; i += 2) {
 		while (number % i === 0) {
 			number /= i;
