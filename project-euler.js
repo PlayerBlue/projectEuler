@@ -51,8 +51,11 @@ function largestPrimeNums1(number) {
 }
 
 function largestPrimeNums2(number) {
-	var max = Math.sqrt(number);
-	for (var i = 2; i <= max; i++) {
+	while (number % 2 === 0) {
+		number /= 2;
+	}
+	max = Math.sqrt(number);
+	for (var i = 3; i <= max; i += 2) {
 		while (number % i === 0) {
 			number /= i;
 			max = Math.sqrt(number);
