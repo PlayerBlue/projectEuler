@@ -23,7 +23,6 @@ function evenFibonacciSum(limit) {
 	return sum;
 }
 
-
 function largestPrimeNum(number) {
 	while (number % 2 === 0) {
 		number /= 2;
