@@ -1,0 +1,118 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+ul.tab {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+}
+
+ul.tab li {float: left}
+
+ul.tab li a {
+	display: inline-block;
+	color: black;
+	text-align: center;
+	padding: 24px 20px;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+ul li a:hover {background-color: #ff9900}
+
+.problem {
+	display: none;
+}
+
+.problem {
+	margin-top: 20px;
+	background-color: #f1f1f1;
+	border: 1px solid #ccc;
+	padding: 15px;
+}
+
+.problem * {
+	margin-left: 20px;
+}
+
+textarea {
+	padding: 10px;
+	margin: 15px;
+	width: 95%;
+	max-width: 95%;
+	background-color: black;
+	color: white;
+}
+
+.func {
+	overflow: hidden;
+	margin-top: 20px;
+	width: 380px;
+	margin-left: 60px;
+}
+
+.func > p {
+	float: left;
+	margin-left: 20px;
+	margin: 0;
+	padding: 3px;
+}
+
+.func > input {
+	float: right;
+	width: 220px;
+	padding: 3px;
+	height: 22px;
+}
+
+.func > p.exec {
+	width: 100px;
+	font-size: 16px;
+	font-style: italic;
+	margin-left: 30px;
+}
+
+.calc {
+	overflow: hidden;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	width: 90%;
+}
+
+.calc * {
+	float: right;
+	margin: 0;
+}
+
+.calc p {
+	padding: 16px 22px;
+}
+
+.calc .result {
+	margin-left: 0px;
+	width: 310px;
+	overflow: visible;
+	background-color: black;
+	color: white;
+	border-radius: 12px;
+}
+
+.calcbutton {
+	float: left;
+	display: inline-block;
+	background-color: #ccc;
+	padding: 16px 80px;
+	text-decoration: none;
+	color: black;
+	border-radius: 5px;
+	margin-left: 40px;
+}
+
+.calcbutton:hover {
+	background-color: #888;
+}
+
