@@ -93,8 +93,9 @@ textarea {
 }
 
 .calc .result {
+	text-align: right;
 	margin-left: 0px;
-	width: 310px;
+	width: 210px;
 	overflow: visible;
 	background-color: black;
 	color: white;
@@ -115,4 +116,3 @@ textarea {
 .calcbutton:hover {
 	background-color: #888;
 }
-
