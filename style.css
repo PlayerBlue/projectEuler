@@ -60,13 +60,14 @@ textarea {
 	margin-left: 20px;
 	margin: 0;
 	padding: 3px;
+	height: 23px;
 }
 
 .func > input {
 	float: right;
 	width: 280px;
 	padding: 3px;
-	height: 22px;
+	height: 23px;
 }
 
 .func > p.exec {
