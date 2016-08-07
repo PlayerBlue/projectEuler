@@ -51,7 +51,7 @@ textarea {
 .func {
 	overflow: hidden;
 	margin-top: 20px;
-	width: 380px;
+	width: 420px;
 	margin-left: 60px;
 }
 
@@ -64,7 +64,7 @@ textarea {
 
 .func > input {
 	float: right;
-	width: 220px;
+	width: 260px;
 	padding: 3px;
 	height: 22px;
 }
@@ -93,6 +93,7 @@ textarea {
 }
 
 .calc .result {
+	min-height: 23px;
 	text-align: right;
 	margin-left: 0px;
 	width: 210px;
