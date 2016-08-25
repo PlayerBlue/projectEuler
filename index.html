@@ -9,28 +9,26 @@
 <body>
     <ul class="tab">
 	    <li><img src="pe_logo_default.png" alt="Project Euler" style="height:45px;width:250px;display:block;margin:12px;"><li>
-	    <li><a href="#" id="prob1b">Problem 1: Multiples of 3 and 5</a></li>
-		<li><a href="#" id="prob2b">Problem 2: Even Fibonacci numbers</a></li>
-		<li><a href="#" id="prob3b">Problem 3: Largest prime factor</a></li>
+	    <li><a href="#" id="prob1b" onclick="load(0)">Problem 1: Multiples of 3 and 5</a></li>
+		<li><a href="#" id="prob2b" onclick="load(1)">Problem 2: Even Fibonacci numbers</a></li>
+		<li><a href="#" id="prob3b" onclick="load(2)">Problem 3: Largest prime factor</a></li>
 	</ul>
 	<img id="logo" src="odin.png" alt="The Odin Project" style="display:block; width:506px; height:328px; margin:auto; margin-top: 120px;">
 	<div id="problem" style="display:none">
-		<div id="probtext"></div>    
-		<textarea rows="20" cols="100" id="probcode">
-
-		</textarea>
+		<div id="text"></div>    
+		<textarea rows="20" cols="100" id="pcode"></textarea>
 		<div class="func">
-		<p>Function call:</p>
-		<input id="func1" type="text" value="multipliesOf3And5([1000, 3, 5]);">
+			<p>Function call:</p>
+			<input id="func" type="text">
 		</div>
 		<div class="func">
-		<p>Execution time:</p>
-		<p id="time1" class="exec"></p>
+			<p>Execution time:</p>
+			<p id="time"></p>
 		</div>
 		<div class="calc">
-		<a href="#" class="calcbutton" onclick="solveProblem(1)">Calculate</a>		
-		<p id="res1" class="result">0</p>
-		<p>Result:</p>
+			<a href="#" id="calc">Calculate</a>		
+			<p id="res"></p>
+			<p>Result:</p>
 		</div>		
 	</div>
 <!--	
