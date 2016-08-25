@@ -58,10 +58,6 @@ var times = [0, 0, 0]
 var results = [0, 0, 0]
 
 var activeTab = 3;
-var text;
-var code;
-var call;
-var result;
 
 $(document).ready(function() {
 	text = $('#text');
