@@ -83,7 +83,7 @@ $(document).ready(function() {
 		$('<script id="scr"></script>').text("function calculate() { return " + call.val() + " }" + " " + code.val()).appendTo('head');
 		var start = new Date();
 		result.text(calculate());
-		time.text(new Date() - start);
+		time.text(new Date() - start + ' ms');
 	});
 });
 
