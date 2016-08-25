@@ -60,6 +60,8 @@ var results = [0, 0, 0]
 var activeTab = 3;
 
 $(document).ready(function() {
+	body = $('body');
+	problemdiv = $('#problem');
 	text = $('#text');
 	code = $('#pcode');
 	call = $('#func');
@@ -74,7 +76,6 @@ $(document).ready(function() {
 
 	$('#calc').on('click', function(event) {
 		event.preventDefault();
-		var body = $('body');
 		$('scr').remove();
 		$('<script id="scr"></script>').text("function calculate() { return " + call.val() + " }" + " " + code.val()).appendTo('head');
 		var start = new Date();
