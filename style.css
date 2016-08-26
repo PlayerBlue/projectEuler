@@ -35,23 +35,23 @@ ul.tab li { float: left }
 	padding: 15px;
 }
 
-#problem * { margin-left: 20px; }
+#text {
+	margin-left: 40px;
+	margin-right: 40px;
+}
 
-#pcode {
-	display: block;
-	width: 90%;
-	max-width: 90%;
-	padding: 10px;
+#editor {
+	position: relative;
+	width: 95%;
 	margin: 30px auto;
-	background-color: black;
-	color: white;
+	height: 500px;
 }
 
 .func {
 	overflow: hidden;
 	margin-top: 20px;
 	width: 440px;
-	margin-left: 60px;
+	margin-left: 40px;
 }
 
 .func > p {
@@ -73,7 +73,7 @@ ul.tab li { float: left }
 	width: 100px;
 	font-size: 16px;
 	font-style: italic;
-	margin-left: 30px;
+	margin-left: 49px;
 }
 
 .calc {
@@ -110,5 +110,5 @@ ul.tab li { float: left }
 	text-decoration: none;
 	color: black;
 	border-radius: 5px;
-	margin-left: 40px;
+	margin-left: 60px;
 }

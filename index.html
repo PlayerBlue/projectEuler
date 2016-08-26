@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="project-euler.js"></script>
 </head>
 <body>
     <ul class="tab">
@@ -16,8 +14,8 @@
 	</ul>
 	<img id="logo" src="odin.png" alt="The Odin Project" style="display:block;width:506px;height:328px;margin:auto;margin-top:100px;">
 	<div id="problem">
-		<div id="text"></div>    
-		<textarea rows="15" cols="20" id="pcode"></textarea>
+		<div id="text"></div> 
+		<div id="editor"></div>
 		<div class="func">
 			<p>Function call:</p>
 			<input id="func" type="text">
@@ -32,4 +30,12 @@
 			<p>Result:</p>
 		</div>		
 	</div>
+	<script src="jquery-3.1.0.min.js"></script>
+	<script src="project-euler.js"></script>
+	<script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/ambiance");
+    editor.getSession().setMode("ace/mode/javascript");
+    </script>
 </body>
