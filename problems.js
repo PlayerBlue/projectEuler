@@ -1,11 +1,10 @@
-function multipliesOf3And5s3(numbers) {
+function multiplesOf3And5(numbers) {
 	numbers[3] = numbers[1] * numbers[2];
-	var max = [];
 	var sum = 0;
 	for (var i = 0; i < 3; i++) {
-		max[i] = numbers[0] / numbers[i + 1];
-		max[i] = (max[i] % i === 0) ? max[i] - 1 : Math.floor(max[i]);
-		var sum1 = max[i] * (max[i] + 1) / 2 * numbers[i + 1];
+		var max = numbers[0] / numbers[i + 1];
+		max = (max % numbers[i + 1] === 0) ? max - 1 : Math.floor(max);
+		var sum1 = max * (max + 1) / 2 * numbers[i + 1];
 		sum += (i < 2) ? sum1 : -sum1;
 	}
 	return sum;
@@ -23,7 +22,7 @@ function evenFibonacciSum(limit) {
 	return sum;
 }
 
-function largestPrimeNum(number) {
+function largestPrimeFactor(number) {
 	while (number % 2 === 0) {
 		number /= 2;
 	}
