@@ -67,17 +67,19 @@ $(document).ready(function() {
 	call = $('#func');
 	time = $('#time');
 	result = $('#res');
+	navButtons = $('.navb');
+	navList = $('li');
 
-	$('.navb').hover(function() {
+	navButtons.hover(function() {
 		$(this).toggleClass('hover');
 	});
 		
-	$('.navb').on('click', function(event) {
+	navButtons.on('click', function(event) {
 		event.preventDefault();
-		$('.navb').removeClass('hover');
-		$('.navb').removeClass('highlight');
+		navButtons.removeClass('hover');
+		navButtons.removeClass('highlight');
 		$(this).addClass('highlight');
-		load($('li').index($(this).parent()) - 2);
+		load(navList.index($(this).parent()) - 2);
 	});
 
 	$('#calc').on('click', function(event) {
