@@ -15,7 +15,7 @@ var texts = [
 	<p>The prime factors of 13195 are 5, 7, 13 and 29.</p>\
 	<p>What is the largest prime factor of the number 600851475143 ?</p>"]
 
-var codes = ["function multipliesOf3And5(numbers) {\r\n\
+var codes = ["function multiplesOf3And5(numbers) {\r\n\
 	numbers[3] = numbers[1] * numbers[2];\r\n\
 	var sum = 0;\r\n\
 	for (var i = 0; i < 3; i++) {\r\n\
@@ -53,7 +53,7 @@ var codes = ["function multipliesOf3And5(numbers) {\r\n\
 	return number;\r\n\
 }"]
 
-var calls = ["multipliesOf3And5([1000, 3, 5]);", "evenFibonacciSum(4000000);", "largestPrimeFactor(600851475143);"]
+var calls = ["multiplesOf3And5([1000, 3, 5]);", "evenFibonacciSum(4000000);", "largestPrimeFactor(600851475143);"]
 var times = [0, 0, 0]
 var results = [0, 0, 0]
 
