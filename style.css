@@ -12,20 +12,20 @@ ul.tab {
 	background-color: #f1f1f1;
 }
 
-ul.tab li {float: left}
+ul.tab li { float: left }
 
 .navb {
 	display: inline-block;
 	color: black;
 	text-align: center;
-	padding: 24px 20px;
+	padding: 24px 38px;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 .hover, #calc:hover { background-color: #ffdd99 }
 
-.highlight {background-color: #ff9900}
+.highlight { background-color: #ff9900 }
 
 #problem {
 	display: none;
@@ -35,9 +35,7 @@ ul.tab li {float: left}
 	padding: 15px;
 }
 
-#problem * {
-	margin-left: 20px;
-}
+#problem * { margin-left: 20px; }
 
 #pcode {
 	display: block;
@@ -91,12 +89,10 @@ ul.tab li {float: left}
 	margin: 0;
 }
 
-.calc p {
-	padding: 16px 22px;
-}
+.calc p { padding: 16px 22px; }
 
 #res {
-	min-height: 23px;
+	min-height: 22px;
 	text-align: right;
 	margin-left: 0px;
 	width: 210px;
@@ -116,7 +112,3 @@ ul.tab li {float: left}
 	border-radius: 5px;
 	margin-left: 40px;
 }
-
-/*#calc:hover {
-	background-color: #888;
-}*/
