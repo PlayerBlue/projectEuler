@@ -39,7 +39,7 @@ var codes = ["function multipliesOf3And5(numbers) {\r\n\
 	return sum;\r\n\
 }",
 
-"function largestPrimeNum(number) {\r\n\
+"function largestPrimeNumber(number) {\r\n\
 	while (number % 2 === 0) {\r\n\
 		number /= 2;\r\n\
 	}\r\n\
@@ -53,7 +53,7 @@ var codes = ["function multipliesOf3And5(numbers) {\r\n\
 	return number;\r\n\
 }"]
 
-var calls = ["multipliesOf3And5([1000, 3, 5]);", "evenFibonacciSum(4000000);", "largestPrimeNum(600851475143);"]
+var calls = ["multipliesOf3And5([1000, 3, 5]);", "evenFibonacciSum(4000000);", "largestPrimeNumber(600851475143);"]
 var times = [0, 0, 0]
 var results = [0, 0, 0]
 
@@ -68,10 +68,17 @@ $(document).ready(function() {
 	time = $('#time');
 	result = $('#res');
 
-	$('li > a').on('click', function(event) {
+	$('.navb').hover(function() {
+		$(this).toggleClass('hover');
+	});
+		
+	$('.navb').on('click', function(event) {
 		event.preventDefault();
-		$('#logo').hide();
-		$('#problem').show();
+		$('.navb').removeClass('hover');
+		$('.navb').removeClass('highlight');
+		$(this).addClass('highlight');
+		load($('li').index($(this).parent()) - 2);
+		
 	});
 
 	$('#calc').on('click', function(event) {
@@ -100,5 +107,8 @@ function save() {
 	calls[activeTab] = call.val();
 	times[activeTab] = time.text();
 	results[activeTab] = result.text();
+	} else {
+		$('#logo').hide();
+		$('#problem').show();
 	}
 }

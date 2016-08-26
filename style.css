@@ -14,7 +14,7 @@ ul.tab {
 
 ul.tab li {float: left}
 
-ul.tab li a {
+.navb {
 	display: inline-block;
 	color: black;
 	text-align: center;
@@ -23,7 +23,9 @@ ul.tab li a {
 	font-size: 18px;
 }
 
-ul li a:hover {background-color: #ff9900}
+.hover, #calc:hover { background-color: #ffdd99 }
+
+.highlight {background-color: #ff9900}
 
 #problem {
 	display: none;
@@ -115,6 +117,6 @@ ul li a:hover {background-color: #ff9900}
 	margin-left: 40px;
 }
 
-#calc:hover {
+/*#calc:hover {
 	background-color: #888;
-}
+}*/
