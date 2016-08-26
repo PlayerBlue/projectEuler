@@ -39,7 +39,7 @@ var codes = ["function multipliesOf3And5(numbers) {\r\n\
 	return sum;\r\n\
 }",
 
-"function largestPrimeNumber(number) {\r\n\
+"function largestPrimeFactor(number) {\r\n\
 	while (number % 2 === 0) {\r\n\
 		number /= 2;\r\n\
 	}\r\n\
@@ -53,7 +53,7 @@ var codes = ["function multipliesOf3And5(numbers) {\r\n\
 	return number;\r\n\
 }"]
 
-var calls = ["multipliesOf3And5([1000, 3, 5]);", "evenFibonacciSum(4000000);", "largestPrimeNumber(600851475143);"]
+var calls = ["multipliesOf3And5([1000, 3, 5]);", "evenFibonacciSum(4000000);", "largestPrimeFactor(600851475143);"]
 var times = [0, 0, 0]
 var results = [0, 0, 0]
 
