@@ -18,11 +18,11 @@ var texts = [
 var codes = ["function multiplesOf3And5(numbers) {\r\n\
 	numbers[3] = numbers[1] * numbers[2];\r\n\
 	var sum = 0;\r\n\
-	for (var i = 0; i < 3; i++) {\r\n\
-		var max = numbers[0] / numbers[i + 1];\r\n\
-		max = (max % numbers[i + 1] === 0) ? max - 1 : Math.floor(max);\r\n\
-		var sum1 = max * (max + 1) / 2 * numbers[i + 1];\r\n\
-		sum += (i < 2) ? sum1 : -sum1;\r\n\
+	for (var i = 1; i < 4; i++) {\r\n\
+		var max = numbers[0] / numbers[i];\r\n\
+		max = (max % numbers[i] === 0) ? max - 1 : Math.floor(max);\r\n\
+		var sum1 = max * (max + 1) / 2 * numbers[i];\r\n\
+		sum += (i < 3) ? sum1 : -sum1;\r\n\
 	}\r\n\
 	return sum;\r\n\
 }",
