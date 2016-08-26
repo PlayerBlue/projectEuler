@@ -63,7 +63,6 @@ $(document).ready(function() {
 	body = $('body');
 	problemdiv = $('#problem');
 	text = $('#text');
-	code = $('#pcode');
 	call = $('#func');
 	time = $('#time');
 	result = $('#res');
@@ -85,7 +84,7 @@ $(document).ready(function() {
 	$('#calc').on('click', function(event) {
 		event.preventDefault();
 		$('scr').remove();
-		$('<script id="scr"></script>').text("function calculate() { return " + call.val() + " }" + " " + code.val()).appendTo('head');
+		$('<script id="scr"></script>').text("function calculate() { return " + call.val() + " }" + " " + editor.getValue()).appendTo('head');
 		var start = new Date();
 		result.text(calculate());
 		time.text(new Date() - start + ' ms');
@@ -95,7 +94,8 @@ $(document).ready(function() {
 function load(problem) {
 	save();
 	text.html(texts[problem]);
-	code.val(codes[problem]);
+	editor.setValue(codes[problem]);
+	editor.gotoLine(editor.session.getLength());
 	call.val(calls[problem]);
 	time.text(times[problem]);
 	result.text(results[problem]);
@@ -104,7 +104,7 @@ function load(problem) {
 
 function save() {
 	if (activeTab < 3) {
-	codes[activeTab] = code.val();
+	codes[activeTab] = editor.getValue();
 	calls[activeTab] = call.val();
 	times[activeTab] = time.text();
 	results[activeTab] = result.text();
