@@ -78,7 +78,6 @@ $(document).ready(function() {
 		$('.navb').removeClass('highlight');
 		$(this).addClass('highlight');
 		load($('li').index($(this).parent()) - 2);
-		
 	});
 
 	$('#calc').on('click', function(event) {
