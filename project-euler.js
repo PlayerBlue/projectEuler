@@ -94,12 +94,16 @@ end",
 end"]
 
 var jsCalls = ["multiples([1000, 3, 5]);", "evenFibonacciSum(4000000);", "largestPrimeFactor(600851475143);"]
-var rbCalls = ["multiples [1000, 3, 5];", "evenFibonacciSum 4000000", "largestPrimeFactor 600851475143"]
-var times = [0, 0, 0]
-var results = [0, 0, 0]
+var rbCalls = ["multiples [1000, 3, 5]", "evenFibonacciSum 4000000", "largestPrimeFactor 600851475143"]
+
+var jsTimes = [0, 0, 0]
+var rbTimes = [0, 0, 0]
+
+var jsResults = [0, 0, 0]
+var rbResults = [0, 0, 0]
 
 var activeTab = 3;
-jsMode = false;
+var jsMode = true;
 
 $(document).ready(function() {
 	body = $('body');
@@ -143,22 +147,60 @@ $(document).ready(function() {
 function load(problem) {
 	save();
 	text.html(texts[problem]);
-	editor.setValue(rbCode[problem]);
-	editor.gotoLine(editor.session.getLength());
-	call.val(rbCalls[problem]);
-	time.text(times[problem]);
-	result.text(results[problem]);
+	getCode(problem);
 	activeTab = problem;
 }
 
 function save() {
 	if (activeTab < 3) {
-	rbCode[activeTab] = editor.getValue();
-	rbCalls[activeTab] = call.val();
-	times[activeTab] = time.text();
-	results[activeTab] = result.text();
+	setCode();
 	} else {
 		$('#logo').hide();
 		$('#problem').show();
+	}
+}
+
+function getCode(number) {
+	if (jsMode) {
+		editor.setValue(jsCode[number]);
+		call.val(jsCalls[number]);
+		time.text(jsTimes[number]);
+		result.text(jsResults[number]);
+	} else {
+		editor.setValue(rbCode[number]);
+		call.val(rbCalls[number]);
+		time.text(rbTimes[number]);
+		result.text(rbResults[number]);
+	}
+	editor.gotoLine(editor.session.getLength());
+}
+
+function setCode() {
+	if (jsMode) {
+		jsCode[activeTab] = editor.getValue();
+		jsCalls[activeTab] = call.val();
+		jsTimes[activeTab] = time.text();
+		jsResults[activeTab] = result.text();
+	} else {
+		rbCode[activeTab] = editor.getValue();
+		rbCalls[activeTab] = call.val();
+		rbTimes[activeTab] = time.text();
+		rbResults[activeTab] = result.text();
+	}
+}
+
+var notOpalLoad = true;
+function switchMode() {
+	setCode();
+	jsMode = !jsMode;
+	getCode(activeTab);
+	if (jsMode) {
+		editor.getSession().setMode("ace/mode/javascript");
+	} else {
+		editor.getSession().setMode("ace/mode/ruby");
+		if (notOpalLoad) {
+			Opal.load('opal-parser');
+			notOpalLoad = false;
+		}
 	}
 }
