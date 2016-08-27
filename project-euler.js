@@ -15,7 +15,7 @@ var texts = [
 	<p>The prime factors of 13195 are 5, 7, 13 and 29.</p>\
 	<p>What is the largest prime factor of the number 600851475143 ?</p>"]
 
-var codes = ["function multiplesOf3And5(numbers) {\r\n\
+var jsCode = ["function multiples(numbers) {\r\n\
 	numbers[3] = numbers[1] * numbers[2];\r\n\
 	var sum = 0;\r\n\
 	for (var i = 1; i < 4; i++) {\r\n\
@@ -53,11 +53,53 @@ var codes = ["function multiplesOf3And5(numbers) {\r\n\
 	return number;\r\n\
 }"]
 
-var calls = ["multiplesOf3And5([1000, 3, 5]);", "evenFibonacciSum(4000000);", "largestPrimeFactor(600851475143);"]
+var rbCode = ["def multiples numbers\r\n\
+    numbers[3] = numbers[1] * numbers [2]\r\n\
+    sum = 0\r\n\
+    (1..3).each do |i|\r\n\
+        max = (numbers[0] / numbers[i]).floor\r\n\
+        max = max - 1 if numbers[0] % numbers[i] == 0\r\n\
+        sum1 = max * (max + 1) / 2 * numbers[i]\r\n\
+        sum += (i < 3) ? sum1 : -sum1\r\n\
+    end\r\n\
+    sum\r\n\
+end",
+
+"def evenFibonacciSum limit\r\n\
+    n1 = 1\r\n\
+    n2 = 2\r\n\
+    sum = 0\r\n\
+    while n2 <= limit do\r\n\
+        if (n2 % 2 === 0)\r\n\
+            sum += n2\r\n\
+        end\r\n\
+        n2 += n1\r\n\
+        n1 = n2 - n1\r\n\
+    end\r\n\
+    sum\r\n\
+end",
+
+"def largestPrimeFactor number\r\n\
+    number /= 2 while number % 2 == 0\r\n\
+    max = number ** 0.5\r\n\
+    i = 3\r\n\
+    while i <= max do\r\n\
+        while number % i === 0 do\r\n\
+            number /= i\r\n\
+            max = number ** 0.5\r\n\
+        end\r\n\
+        i += 2\r\n\
+    end\r\n\
+    number\r\n\
+end"]
+
+var jsCalls = ["multiples([1000, 3, 5]);", "evenFibonacciSum(4000000);", "largestPrimeFactor(600851475143);"]
+var rbCalls = ["multiples [1000, 3, 5];", "evenFibonacciSum 4000000", "largestPrimeFactor 600851475143"]
 var times = [0, 0, 0]
 var results = [0, 0, 0]
 
 var activeTab = 3;
+jsMode = false;
 
 $(document).ready(function() {
 	body = $('body');
@@ -84,19 +126,26 @@ $(document).ready(function() {
 	$('#calc').on('click', function(event) {
 		event.preventDefault();
 		$('#scr').remove();
-		$('<script id="scr"></script>').text("function calculate() { return " + call.val() + " }" + " " + editor.getValue()).appendTo('head');
-		var start = new Date();
-		result.text(calculate());
-		time.text(new Date() - start + ' ms');
+		if (jsMode) {
+			$('<script id="scr"></script>').text("function calculate() { return " + call.val() + " } " + editor.getValue()).appendTo('head');
+			var start = new Date();
+			result.text(calculate());
+			time.text(new Date() - start + ' ms');
+		} else {
+			var start = new Date();
+			$('<script id="scr"></script>').text(Opal.compile(editor.getValue()) + ' tr = ' + Opal.compile(call.val())).appendTo('head');
+			time.text(new Date() - start + ' ms');
+			result.text(tr);
+		}
 	});
 });
 
 function load(problem) {
 	save();
 	text.html(texts[problem]);
-	editor.setValue(codes[problem]);
+	editor.setValue(rbCode[problem]);
 	editor.gotoLine(editor.session.getLength());
-	call.val(calls[problem]);
+	call.val(rbCalls[problem]);
 	time.text(times[problem]);
 	result.text(results[problem]);
 	activeTab = problem;
@@ -104,8 +153,8 @@ function load(problem) {
 
 function save() {
 	if (activeTab < 3) {
-	codes[activeTab] = editor.getValue();
-	calls[activeTab] = call.val();
+	rbCode[activeTab] = editor.getValue();
+	rbCalls[activeTab] = call.val();
 	times[activeTab] = time.text();
 	results[activeTab] = result.text();
 	} else {
