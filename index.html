@@ -35,16 +35,16 @@
 	<script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
 	<script src="ace/ext-language_tools.js"></script>
 	<script>
-	ace.require("ace/ext/language_tools");
-	var editor = ace.edit("editor");
-	editor.getSession().setMode("ace/mode/javascript");
-	editor.setTheme("ace/theme/tomorrow_night_bright");
-	document.getElementById('editor').style.fontSize='14px';
-	editor.setOptions({
-		enableBasicAutocompletion: true,
-		//enableSnippets: true,
-		enableLiveAutocompletion: true
-	});
-	editor.$blockScrolling = Infinity;
+		ace.require("ace/ext/language_tools");
+		var editor = ace.edit("editor");
+		editor.getSession().setMode("ace/mode/javascript");
+		editor.setTheme("ace/theme/tomorrow_night_bright");
+		document.getElementById('editor').style.fontSize='14px';
+		editor.setOptions({
+			enableBasicAutocompletion: true,
+			//enableSnippets: true,
+			enableLiveAutocompletion: true
+		});
+		editor.$blockScrolling = Infinity;
     </script>
 </body>
