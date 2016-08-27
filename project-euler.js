@@ -39,7 +39,7 @@ var jsCode = ["function multiples(numbers) {\r\n\
 	return sum;\r\n\
 }",
 
-"function largestPrimeFactor(number) {\r\n\
+"function largestPrime(number) {\r\n\
 	while (number % 2 === 0) {\r\n\
 		number /= 2;\r\n\
 	}\r\n\
@@ -79,7 +79,7 @@ end",
     sum\r\n\
 end",
 
-"def largestPrimeFactor number\r\n\
+"def largestPrime number\r\n\
     number /= 2 while number % 2 == 0\r\n\
     max = number ** 0.5\r\n\
     i = 3\r\n\
@@ -93,8 +93,8 @@ end",
     number\r\n\
 end"]
 
-var jsCalls = ["multiples([1000, 3, 5]);", "evenFibonacciSum(4000000);", "largestPrimeFactor(600851475143);"]
-var rbCalls = ["multiples [1000, 3, 5]", "evenFibonacciSum 4000000", "largestPrimeFactor 600851475143"]
+var jsCalls = ["multiples([1000, 3, 5]);", "evenFibonacciSum(4000000);", "largestPrime(600851475143);"]
+var rbCalls = ["multiples [1000, 3, 5]", "evenFibonacciSum 4000000", "largestPrime 600851475143"]
 
 var jsTimes = [0, 0, 0]
 var rbTimes = [0, 0, 0]

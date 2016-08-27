@@ -50,7 +50,7 @@ ul.tab li { float: left }
 .func {
 	overflow: hidden;
 	margin-top: 20px;
-	width: 440px;
+	width: 460px;
 	margin-left: 40px;
 }
 
@@ -59,14 +59,16 @@ ul.tab li { float: left }
 	margin-left: 20px;
 	margin: 0;
 	padding: 3px;
+	padding-left: 5px;
 	height: 23px;
 }
 
 #func {
 	float: right;
-	width: 260px;
-	padding: 3px;
-	height: 23px;
+	width: 280px;
+	padding-left: 5px;
+	height: 27px;
+	font-size: 16px;
 }
 
 #time {
