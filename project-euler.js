@@ -83,7 +83,7 @@ $(document).ready(function() {
 
 	$('#calc').on('click', function(event) {
 		event.preventDefault();
-		$('scr').remove();
+		$('#scr').remove();
 		$('<script id="scr"></script>').text("function calculate() { return " + call.val() + " }" + " " + editor.getValue()).appendTo('head');
 		var start = new Date();
 		result.text(calculate());
