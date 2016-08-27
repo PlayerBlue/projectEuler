@@ -147,7 +147,9 @@ $(document).ready(function() {
 		event.preventDefault();
 		$('.sel').removeClass('active');
 		$(this).addClass('active');
-		switchMode();
+		if ((this.id === "js" && jsMode === false) || (this.id === "rb" && jsMode === true)) {
+			switchMode();
+		}
 	});
 });
 
