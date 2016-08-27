@@ -2,8 +2,6 @@
 <head>
     <title>The Odin Project - Project Euler Problems</title>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <ul class="tab">
@@ -30,6 +28,8 @@
 			<p>Result:</p>
 		</div>		
 	</div>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="jquery-3.1.0.min.js"></script>
 	<script src="project-euler.js"></script>
 	<script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
@@ -38,7 +38,7 @@
 	ace.require("ace/ext/language_tools");
 	var editor = ace.edit("editor");
 	editor.getSession().setMode("ace/mode/javascript");
-	editor.setTheme("ace/theme/ambiance");
+	editor.setTheme("ace/theme/tomorrow_night_bright");
 	document.getElementById('editor').style.fontSize='14px';
 	editor.setOptions({
 		enableBasicAutocompletion: true,
