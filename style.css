@@ -1,6 +1,6 @@
 body {
 	font-family: 'Open Sans', sans-serif;
-	min-width: 720px;
+	min-width: 900px;
 }
 
 ul.tab {
@@ -12,7 +12,7 @@ ul.tab {
 	background-color: #f1f1f1;
 }
 
-ul.tab li { float: left }
+ul.tab li { float: left; }
 
 .navb {
 	display: inline-block;
@@ -23,9 +23,9 @@ ul.tab li { float: left }
 	font-size: 20px;
 }
 
-.hover, #calc:hover { background-color: #ffdd99 }
+.hover { background-color: #c4e2ee; }
 
-.highlight { background-color: #ff9900 }
+.highlight { background-color: #4ea6ca; }
 
 #problem {
 	display: none;
@@ -69,6 +69,7 @@ ul.tab li { float: left }
 	padding-left: 5px;
 	height: 27px;
 	font-size: 16px;
+	background-color: #ffdd99;
 }
 
 #time {
@@ -80,10 +81,11 @@ ul.tab li { float: left }
 
 .calc {
 	overflow: hidden;
-	margin-top: 35px;
+	margin-top: 30px;
 	margin-bottom: 25px;
 	width: 90%;
-	min-width: 640px;
+	min-width: 840px;
+	padding: 10px 0;
 }
 
 .calc * {
@@ -104,13 +106,39 @@ ul.tab li { float: left }
 	border-radius: 12px;
 }
 
-#calc {
+#calc, .sel {
 	float: left;
+	font-size: 19px;
 	display: inline-block;
-	background-color: #ccc;
-	padding: 16px 80px;
 	text-decoration: none;
 	color: black;
+}
+
+#calc {
+	background-color: #ccc;
+	padding: 14px 60px;
 	border-radius: 5px;
 	margin-left: 60px;
 }
+
+#calc:hover, .active {
+	background-color: #4ea6ca;
+	color: white;
+	-webkit-box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.15);
+	box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.15);
+ }
+
+ .sel {
+ 	font-size: 16px;
+ 	border: 1px solid #4ea6ca;
+ 	border-collapse: collapse;
+ 	margin: 5px 0;
+ 	padding: 10px 0;
+ 	width: 100px;
+ 	text-align: center;
+ }
+
+ #js { border-right: none; }
+
+ #rb { border-left: none; }

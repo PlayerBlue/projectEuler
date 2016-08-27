@@ -142,6 +142,13 @@ $(document).ready(function() {
 			result.text(tr);
 		}
 	});
+
+	$('.sel').on('click', function() {
+		event.preventDefault();
+		$('.sel').removeClass('active');
+		$(this).addClass('active');
+		switchMode();
+	});
 });
 
 function load(problem) {
