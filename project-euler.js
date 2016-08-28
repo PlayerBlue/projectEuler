@@ -169,7 +169,7 @@ function save() {
 		$('#logo').hide();
 		$('#problem').show();
 		$('html').css('background-color', '#10303c');
-		$('.nli').css('border', 'none');
+		$('.nli').css('border', '1px solid #10303c');
 	}
 }
 

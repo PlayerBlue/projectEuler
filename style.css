@@ -1,6 +1,7 @@
 body {
 	font-family: 'Open Sans', sans-serif;
-	min-width: 900px;
+	min-width: 1086px;
+	margin: 8px;
 }
 
 .tab {
@@ -27,7 +28,7 @@ body {
 	display: inline-block;
 	color: black;
 	text-align: center;
-	padding: 24px 34px;
+	padding: 18px 30px;
 	text-decoration: none;
 	font-size: 20px;
 }
