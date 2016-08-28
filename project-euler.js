@@ -145,7 +145,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.sel').on('click', function() {
+	$('.sel').on('click', function(event) {
 		event.preventDefault();
 		$('.sel').removeClass('active');
 		$(this).addClass('active');
