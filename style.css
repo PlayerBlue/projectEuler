@@ -3,27 +3,36 @@ body {
 	min-width: 900px;
 }
 
-ul.tab {
+.tab {
+	background-color: rgba(255, 255, 255, 0);
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	border: 1px solid #ccc;
-	background-color: #f1f1f1;
 }
 
-ul.tab li { float: left; }
+.nli, #euler {
+	float: left;
+}
+
+.nli {	
+	margin-left: 10px;
+	background-color: #eaf5fa;
+	border: 1px solid #c4e2ee;
+}
+
+#text > p { font-style: italic; }
 
 .navb {
 	display: inline-block;
 	color: black;
 	text-align: center;
-	padding: 24px 38px;
+	padding: 24px 34px;
 	text-decoration: none;
 	font-size: 20px;
 }
 
-.hover, #calc, #func {
+.hover, #calc {
 	background-color: #c4e2ee;
 	-webkit-box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,0.1);
 	-moz-box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,0.1);
@@ -37,8 +46,8 @@ ul.tab li { float: left; }
 
 #problem {
 	display: none;
-	margin-top: 20px;
-	background-color: #f1f1f1;
+	margin-top: 15px;
+	background-color: #eaf5fa;
 	border: 1px solid #ccc;
 	padding: 15px;
 }
@@ -77,6 +86,8 @@ ul.tab li { float: left; }
 	padding-left: 5px;
 	height: 27px;
 	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
 }
 
 #time {
@@ -91,7 +102,7 @@ ul.tab li { float: left; }
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 25px;
-	width: 95%;
+	width: 90%;
 	min-width: 840px;
 	padding: 10px 5px;
 }
@@ -123,10 +134,13 @@ ul.tab li { float: left; }
 }
 
 #calc {
-	padding: 14px 60px;
+	padding: 14px 80px;
 	border-radius: 5px;
 	margin-left: 0;
+	border: 1px solid #83c4e2;
 }
+
+#calc:hover { border: none; }
 
 #calc:hover, .active {
 	background-color: #4ea6ca;

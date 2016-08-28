@@ -116,7 +116,9 @@ $(document).ready(function() {
 	navList = $('li');
 
 	navButtons.hover(function() {
-		$(this).toggleClass('hover');
+		$(this).addClass('hover');
+	}, function() {
+		$(this).removeClass('hover');
 	});
 		
 	navButtons.on('click', function(event) {
@@ -166,6 +168,8 @@ function save() {
 	} else {
 		$('#logo').hide();
 		$('#problem').show();
+		$('html').css('background-color', '#10303c');
+		$('.nli').css('border', 'none');
 	}
 }
 
