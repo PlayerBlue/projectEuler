@@ -23,9 +23,17 @@ ul.tab li { float: left; }
 	font-size: 20px;
 }
 
-.hover { background-color: #c4e2ee; }
+.hover, #calc, #func {
+	background-color: #c4e2ee;
+	-webkit-box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,0.1);
+	box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,0.1);
+}
 
-.highlight { background-color: #4ea6ca; }
+.highlight {
+	background-color: #4ea6ca;
+	color: white;
+}
 
 #problem {
 	display: none;
@@ -69,7 +77,6 @@ ul.tab li { float: left; }
 	padding-left: 5px;
 	height: 27px;
 	font-size: 16px;
-	background-color: #ffdd99;
 }
 
 #time {
@@ -81,11 +88,12 @@ ul.tab li { float: left; }
 
 .calc {
 	overflow: hidden;
+	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 25px;
-	width: 90%;
+	width: 95%;
 	min-width: 840px;
-	padding: 10px 0;
+	padding: 10px 5px;
 }
 
 .calc * {
@@ -101,7 +109,7 @@ ul.tab li { float: left; }
 	margin-left: 0px;
 	width: 210px;
 	overflow: visible;
-	background-color: black;
+	background-color: #10303c;
 	color: white;
 	border-radius: 12px;
 }
@@ -115,10 +123,9 @@ ul.tab li { float: left; }
 }
 
 #calc {
-	background-color: #ccc;
 	padding: 14px 60px;
 	border-radius: 5px;
-	margin-left: 60px;
+	margin-left: 0;
 }
 
 #calc:hover, .active {
