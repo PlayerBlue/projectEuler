@@ -1,6 +1,6 @@
 body {
 	font-family: 'Open Sans', sans-serif;
-	min-width: 1086px;
+	min-width: 1071px;
 	margin: 8px;
 }
 
@@ -17,7 +17,7 @@ body {
 }
 
 .nli {	
-	margin-left: 10px;
+	margin-left: 5px;
 	background-color: #eaf5fa;
 	border: 1px solid #c4e2ee;
 }
@@ -42,7 +42,7 @@ body {
 
 #problem {
 	display: none;
-	margin-top: 10px;
+	margin-top: 8px;
 	background-color: #eaf5fa;
 	border: 1px solid #ccc;
 	padding: 15px;
