@@ -33,16 +33,11 @@ body {
 	font-size: 20px;
 }
 
-.hover, #calc {
+.hover {
 	background-color: #c4e2ee;
 	-webkit-box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,0.1);
 	-moz-box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,0.1);
 	box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,0.1);
-}
-
-.highlight {
-	background-color: #4ea6ca;
-	color: white;
 }
 
 #problem {
@@ -139,16 +134,18 @@ body {
 
 #calc {
 	padding: 14px 80px;
-	border-radius: 5px;
 	margin-left: 0;
-	border: 1px solid #83c4e2;
+	border-radius: 5px;
 }
 
-#calc:hover { border: none; }
+#calc:hover { background-color: #10303c; }
 
-#calc:hover, .active {
+.highlight, .active, #calc {
 	background-color: #4ea6ca;
 	color: white;
+}
+
+#calc, .active {
 	-webkit-box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.15);
 	-moz-box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.15);
 	box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.15);
