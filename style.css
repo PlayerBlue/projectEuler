@@ -160,6 +160,11 @@ body {
  	text-align: center;
  }
 
+ #resl {
+ 	padding-left: 38px;
+ 	padding-right: 14px; 
+ }
+
  #js { border-right: none; }
 
  #rb { border-left: none; }
