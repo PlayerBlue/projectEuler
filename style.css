@@ -164,6 +164,7 @@ body {
 
  .sel {
  	font-size: 16px;
+ 	color: #4ea6ca;
  	border: 1px solid #4ea6ca;
  	border-collapse: collapse;
  	margin: 5px 0;
